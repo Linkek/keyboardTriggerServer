@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Keyboard Trigger",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "http://localhost:3000/*"
+    ],
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+    }]
+}
